@@ -20,7 +20,7 @@ window = Tk()
 window.title("AWS Analytics")
 window.geometry("900x640") #Width x Height
 
-head_label = Label(text = "Face Recognition")
+head_label = Label(text = "AWS Analytics")
 head_label.config(font=("Courier", 44))
 head_label.grid(row= 1, column=1, columnspan=2)
 
