@@ -12,12 +12,12 @@ import os
 
 client=boto3.client('rekognition')
 
-client = boto3.client("rekognition",aws_access_key_id='ASIAZX6VTHS6DINGDUEI',
-aws_secret_access_key='+HEbRc1VFELOKJZl8y/G/CFiWtSwww0KaTlvs+TU',aws_session_token='FwoGZXIvYXdzEGIaDFMn4SlgzvCF2MZMPyLbAYXRuHBOj+1Hul+8Ugg3tmnpu8gq6oPHOoj+TEiWvouEs5pjP8dGVyjbGncudfj/R3sblHJwk9I4+vswv+fBLBxhB61e5UkwsgPvZQxn5gvjRhFCJuBzVUqJw2J92jMReG/vs8Wm+jJG1WA5TTsnMQzur4FXNpwCFP4PyB+Kac0YAhQTIUCXEnki8O4nNflGgHvWSChb/B+yNoToMOOgW+ACxXZt1HGdX158fAEmp+iQA1JvfShfsJYXm0pDW5GUpsPUnnsNbuPdGAgjLXz8BihFEr1zNDV1TSgYZSi9k9j7BTItLR2CLiHFmDWj+ya/TRZAK6DG783BKVu62xdryzhDyslcM3cFVPpScRKEUgZ0')
+client = boto3.client("rekognition",aws_access_key_id='ASIAZX6VTHS6I5BBZJ4X',
+aws_secret_access_key='f9BzD+dVWPEp09syPkiqvH1TeJK7ZmhOw5Fnpsvc',aws_session_token='FwoGZXIvYXdzEGwaDEx6fT5eKva/el+1SSLbAVNts85EEyTpVwePcKwFBpi07MClJpLXVk/hyKwrae89Hyfs6r2sekoGKa1Jissrtpkc1qSRmizPdvw89SemTaRtem34UvLdpmY0U6HipvATFNkbqGXjumOJ/JwpR2/5tSH+fsU0Nnd8KJJ2hocAmyXyRhYLULI0OGcnEnuswpJN+Vwi84Nhp/gm1Uxol0C05Xynb6BXK+VhyTXP6APz6Iu7AVg9wSUVr8V5oYnLWyGywledsEUPafwX+UxC//e9/UlfBmDFOXSxOBLv0z9Cmy4lGWHhqO5pBe5lByiQr9r7BTItX/751jBQqCLO2cNVqE6ivFIus9koWTV49Q23DyeewlmID7JJyGM9IyToUx5Q')
 
 
 window = Tk()
-window.title("Facial Analysis")
+window.title("AWS Analytics")
 window.geometry("900x640") #Width x Height
 
 head_label = Label(text = "Face Recognition")
@@ -32,6 +32,7 @@ file = open(filename, 'rb').read()
 
 try:
 	file = open(filename, 'rb').read()
+
 
 	response = client.detect_faces(
     Image={'Bytes': file
